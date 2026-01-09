@@ -7,26 +7,30 @@
   "ifid": "C8C882AF-2580-4F1D-AC2F-3BB98491400A",
   "format": "Harlowe",
   "format-version": "3.3.9",
-  "start": "Untitled Passage",
+  "start": "Start",
   "zoom": 1
 }
 
 
-:: Listen {"position":"1400,200","size":"100,100"}
+:: Listen {"position":"1300,300","size":"100,100"}
 You hear nothing.
 
 
-:: Smell {"position":"1400,400","size":"100,100"}
+:: Smell {"position":"1300,150","size":"100,100"}
 You smell nothing.
 
 
-:: Untitled Passage {"position":"1000,300","size":"100,100"}
+:: Start {"position":"1000,300","size":"100,100"}
 //Hello//
 
 [[What is this?]]
 
 
-:: What is this? {"position":"1200,300","size":"100,100"}
+:: Touch {"position":"1300,450","size":"100,100"}
+There is no ground under your feet.
+
+
+:: What is this? {"position":"1150,300","size":"100,100"}
 //Nothing.//
 
 You look around. You can't see anything.
@@ -34,3 +38,5 @@ You look around. You can't see anything.
 [[Smell]]
 
 [[Listen]]
+
+[[Touch]]
