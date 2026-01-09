@@ -12,47 +12,97 @@
 }
 
 
-:: Choice1 {"position":"1300,100","size":"100,100"}
-You smell nothing.
-
-[[Continue->Outcome1]]
-
-
-:: Choice2 {"position":"1300,300","size":"100,100"}
-You hear nothing.
-
-[[Continue->Outcome1]]
-
-
-:: Choice3 {"position":"1300,500","size":"100,100"}
-There is no ground under your feet.
-
-[[Continue->Outcome1]]
-
-
 :: Decision1 {"position":"1150,300","size":"100,100"}
-//Nothing.//
+This is Decision1
 
-You look around. You can't see anything.
+[[Selection 1A]]
 
-[[Choice1]]
+[[Selection 1B]]
 
-[[Choice2]]
-
-[[Choice3]]
+[[Selection 1C]]
 
 
 :: Decision2 {"position":"1600,300","size":"100,100"}
 Choice
 
+[[Selection 2A]]
+
+[[Selection 2B]]
+
+[[Selection 2C]]
+
+
+:: Decision3 {"position":"2050,300","size":"100,100"}
+[[Selection 3A]]
+
+[[Selection 3B]]
+
+[[Selection 3C]]
+
+
+:: Ending {"position":"2500,300","size":"100,100"}
+this is the end
+
 
 :: Outcome1 {"position":"1450,300","size":"100,100"}
-There is still nothing.
+This is Outcome1
 
 [[Continue->Decision2]]
 
 
+:: Outcome2 {"position":"1900,300","size":"100,100"}
+[[Continue->Decision3]]
+
+
+:: Outcome3 {"position":"2350,300","size":"100,100"}
+[[Continue->Ending]]
+
+
+:: Selection 1A {"position":"1300,150","size":"100,100"}
+You smell nothing.
+
+[[Continue->Outcome1]]
+
+
+:: Selection 1B {"position":"1300,300","size":"100,100"}
+You hear nothing.
+
+[[Continue->Outcome1]]
+
+
+:: Selection 1C {"position":"1300,450","size":"100,100"}
+There is no ground under your feet.
+
+[[Continue->Outcome1]]
+
+
+:: Selection 2A {"position":"1750,150","size":"100,100"}
+[[Continue->Outcome2]]
+
+
+:: Selection 2B {"position":"1750,300","size":"100,100"}
+[[Continue->Outcome2]]
+
+
+:: Selection 2C {"position":"1750,450","size":"100,100"}
+[[Continue->Outcome2]]
+
+
+:: Selection 3A {"position":"2200,150","size":"100,100"}
+[[Continue->Outcome3]]
+
+
+:: Selection 3B {"position":"2200,300","size":"100,100"}
+[[Continue->Outcome3]]
+
+
+:: Selection 3C {"position":"2200,450","size":"100,100"}
+[[Continue->Outcome3]]
+
+
 :: Start {"position":"1000,300","size":"100,100"}
-You awake in water. Sitting up, you feel the surface just below your waist. Darkness stretches endlessly into the horizon. The only light comes from.
+~~You awake in water. Sitting up, you feel the surface just below your waist. Darkness stretches endlessly into the horizon. The only light comes from.~~
+
+This is the start
 
 [[Decision1]]
