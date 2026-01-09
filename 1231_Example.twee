@@ -12,31 +12,47 @@
 }
 
 
-:: Listen {"position":"1300,300","size":"100,100"}
-You hear nothing.
-
-
-:: Smell {"position":"1300,150","size":"100,100"}
+:: Choice1 {"position":"1300,100","size":"100,100"}
 You smell nothing.
 
-
-:: Start {"position":"1000,300","size":"100,100"}
-//Hello//
-
-[[What is this?]]
+[[Continue->Outcome1]]
 
 
-:: Touch {"position":"1300,450","size":"100,100"}
+:: Choice2 {"position":"1300,300","size":"100,100"}
+You hear nothing.
+
+[[Continue->Outcome1]]
+
+
+:: Choice3 {"position":"1300,500","size":"100,100"}
 There is no ground under your feet.
 
+[[Continue->Outcome1]]
 
-:: What is this? {"position":"1150,300","size":"100,100"}
+
+:: Decision1 {"position":"1150,300","size":"100,100"}
 //Nothing.//
 
 You look around. You can't see anything.
 
-[[Smell]]
+[[Choice1]]
 
-[[Listen]]
+[[Choice2]]
 
-[[Touch]]
+[[Choice3]]
+
+
+:: Decision2 {"position":"1600,300","size":"100,100"}
+Choice
+
+
+:: Outcome1 {"position":"1450,300","size":"100,100"}
+There is still nothing.
+
+[[Continue->Decision2]]
+
+
+:: Start {"position":"1000,300","size":"100,100"}
+You awake in water. Sitting up, you feel the surface just below your waist. Darkness stretches endlessly into the horizon. The only light comes from.
+
+[[Decision1]]
