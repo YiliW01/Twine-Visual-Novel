@@ -1,0 +1,22 @@
+:: StoryTitle
+1231_Example
+
+
+:: StoryData
+{
+  "ifid": "C8C882AF-2580-4F1D-AC2F-3BB98491400A",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Untitled Passage",
+  "zoom": 1
+}
+
+
+:: Untitled Passage {"position":"1000,300","size":"100,100"}
+Hello
+
+[[What is this?]]
+
+
+:: What is this? {"position":"1000,425","size":"100,100"}
+Nothing
