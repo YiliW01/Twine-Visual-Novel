@@ -12,11 +12,25 @@
 }
 
 
+:: Listen {"position":"1400,200","size":"100,100"}
+You hear nothing.
+
+
+:: Smell {"position":"1400,400","size":"100,100"}
+You smell nothing.
+
+
 :: Untitled Passage {"position":"1000,300","size":"100,100"}
-Hello
+//Hello//
 
 [[What is this?]]
 
 
-:: What is this? {"position":"1000,425","size":"100,100"}
-Nothing
+:: What is this? {"position":"1200,300","size":"100,100"}
+//Nothing.//
+
+You look around. You can't see anything.
+
+[[Smell]]
+
+[[Listen]]
