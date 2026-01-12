@@ -8,18 +8,20 @@
   "format": "Harlowe",
   "format-version": "3.3.9",
   "start": "Start",
-  "zoom": 1
+  "zoom": 0.6
 }
 
 
 :: Decision1 {"position":"1150,300","size":"100,100"}
-This is Decision1
+"Well, mortal, how did you die?" The man asked.
 
-[[Selection 1A]]
+You think of the moment you passed from the world. Memories flood your mind.
 
-[[Selection 1B]]
+[[I was at war.->Selection 1A]]
 
-[[Selection 1C]]
+[[I was returning from a drink with a friend.->Selection 1B]]
+
+[[I was escaping from a robbery.->Selection 1C]]
 
 
 :: Decision2 {"position":"1600,300","size":"100,100"}
@@ -101,8 +103,10 @@ There is no ground under your feet.
 
 
 :: Start {"position":"1000,300","size":"100,100"}
-~~You awake in water. Sitting up, you feel the surface just below your waist. Darkness stretches endlessly into the horizon. The only light comes from.~~
+Moments ago, you had just died. 
 
-This is the start
+You suddenly awake in water. Sitting up, you feel the surface just below your waist. Darkness stretches endlessly into the horizon. The only thing visible is a tall stone desk, behind which sits a man in a dark suit.
 
-[[Decision1]]
+You make eye contact with the man, and he gestures towards the space in front of his bench. This small space is mysteriously illuminated by an unseen light source. Though the cold harsh light did not provide any form of comfort.
+
+[[Walk up to bench.->Decision1]]
