@@ -13,9 +13,9 @@
 
 
 :: Decision1 {"position":"1150,300","size":"100,100"}
-You approch the stand and step up onto a stone platform in the water. Only the sounds of water falling onto stone filled the silence.
+You approach the stand and step up onto a stone platform in the water. Only the sounds of water falling onto stone fills the silence.
 
-The man looked down at you for a moment, judging your appearance.
+The man looks down at you for a moment, judging your appearance.
 
 "Well, mortal, who were you in life?"
 
@@ -55,10 +55,16 @@ He returned his gaze onto you.
 
 
 :: Ending {"position":"2500,300","size":"100,100"}
-this is the end
+The man looks back down at his papers. A surprised expression rolls across his face.
+
+"Uh, apologies, it seems you were instead slotted for reincarnation. You will be sent back to the living very soon."
+
+Light begins to surround you. Very quickly the light becomes blinding, blocking out your surroundings. You feel your body lift in to the air, then falling..
 
 
 :: Outcome1 {"position":"1450,300","size":"100,100"}
+The man thinks about your answer. He stays silent.
+
 [[Continue->Decision2]]
 
 
@@ -71,22 +77,32 @@ this is the end
 
 
 :: Selection 1A {"position":"1300,150","size":"100,100"}
+You remember a life in the army. Fighting battles for kings and lords.
+
 [[Continue->Outcome1]]
 
 
 :: Selection 1B {"position":"1300,300","size":"100,100"}
+You remember a a life spent toiling in the fields. Working hard to feed your family.
+
 [[Continue->Outcome1]]
 
 
 :: Selection 1C {"position":"1300,450","size":"100,100"}
+You remember a life of thievery and deceit. Always spent watching your back and never trusting anyone.
+
 [[Continue->Outcome1]]
 
 
 :: Selection 2A {"position":"1750,150","size":"100,100"}
+You think back to just moments before. You were in a battle, and did not notice an archer on the ridge in the distance. Only in the final moments did you whip you head around in time to notice the arrows whistling through the air at your head.
+
 [[Continue->Outcome2]]
 
 
 :: Selection 2B {"position":"1750,300","size":"100,100"}
+You think back to just moments before.
+
 [[Continue->Outcome2]]
 
 
