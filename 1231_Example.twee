@@ -35,7 +35,7 @@ The man asked another question,
 
 [[An arrow from an enemy.->Selection 2A]]
 
-[[Poison in my drink from a friend.->Selection 2B]]
+[[Poison in a drink from a friend.->Selection 2B]]
 
 [[Old age.->Selection 2C]]
 
@@ -45,7 +45,7 @@ The man looked down at his desk for a few moments. The sounds of paper shuffling
 
 He returned his gaze onto you.
 
-"Where do you believe you should go in the afterlife?"
+"Which realm do you believe you should go to in the afterlife?"
 
 [[The Honoured Halls->Selection 3A]]
 
@@ -59,7 +59,7 @@ The man looks back down at his papers. A surprised expression rolls across his f
 
 "Uh, apologies, it seems you were instead slotted for reincarnation. You will be sent back to the living very soon."
 
-Light begins to surround you. Very quickly the light becomes blinding, blocking out your surroundings. You feel your body lift in to the air, then falling..
+Light begins to surround you. Very quickly the light becomes blinding, blocking out your surroundings. You feel your body lift in to the air, then falling...
 
 
 :: Outcome1 {"position":"1450,300","size":"100,100"}
@@ -69,10 +69,14 @@ The man thinks about your answer. He stays silent.
 
 
 :: Outcome2 {"position":"1900,300","size":"100,100"}
+The man nods his head as you finish telling your story. He looks down at something on his desk.
+
 [[Continue->Decision3]]
 
 
 :: Outcome3 {"position":"2350,300","size":"100,100"}
+The man thought for a moment. "Very well, you may enter realm you chose."
+
 [[Continue->Ending]]
 
 
@@ -89,36 +93,52 @@ You remember a a life spent toiling in the fields. Working hard to feed your fam
 
 
 :: Selection 1C {"position":"1300,450","size":"100,100"}
-You remember a life of thievery and deceit. Always spent watching your back and never trusting anyone.
+You remember a life of thievery and deceit. Always watching your back and trusting very few people.
 
 [[Continue->Outcome1]]
 
 
 :: Selection 2A {"position":"1750,150","size":"100,100"}
-You think back to just moments before. You were in a battle, and did not notice an archer on the ridge in the distance. Only in the final moments did you whip you head around in time to notice the arrows whistling through the air at your head.
+You think back to just moments before. You were in a tough battle, focusing on the enemies in front of you and did not notice an archer on the ridge in the distance. 
+
+Only in the final moments did you whip you head around in time to notice the arrows whistling through the air at your head.
 
 [[Continue->Outcome2]]
 
 
 :: Selection 2B {"position":"1750,300","size":"100,100"}
-You think back to just moments before.
+You think back to just moments before. You were in a tavern with a friend. Someone you thought you trusted more than anyone else. You took a drink from your cup, and begin to feel dizzy. 
+
+Your friend looks at you and says: "I'm sorry it had to come to this."
+
+The dizziness strengthens, until everything goes dark.
 
 [[Continue->Outcome2]]
 
 
 :: Selection 2C {"position":"1750,450","size":"100,100"}
+You think back to just moments before. You were resting peacefully in your bed. Your spouse next to you. You reflect back to the last few years of your life, most of it spent happily with your family.
+
+You are calm, and slowly drift into sleep.
+
 [[Continue->Outcome2]]
 
 
 :: Selection 3A {"position":"2200,150","size":"100,100"}
+"Ah, the Honoured Halls." The man said. "Where those who deserve a happy and honoured afterlife go."
+
 [[Continue->Outcome3]]
 
 
 :: Selection 3B {"position":"2200,300","size":"100,100"}
+"Ah, the Common Lands. Where those who did nothing remarkable reside." The man said. "Spending eternity with others who have done nothing with their lives."
+
 [[Continue->Outcome3]]
 
 
 :: Selection 3C {"position":"2200,450","size":"100,100"}
+"Ah, the Pits of Anguish." The man said. "Where those who were
+
 [[Continue->Outcome3]]
 
 
