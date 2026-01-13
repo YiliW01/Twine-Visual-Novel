@@ -13,33 +13,45 @@
 
 
 :: Decision1 {"position":"1150,300","size":"100,100"}
-"Well, mortal, how did you die?" The man asked.
+You approch the stand and step up onto a stone platform in the water. Only the sounds of water falling onto stone filled the silence.
 
-You think of the moment you passed from the world. Memories flood your mind.
+The man looked down at you for a moment, judging your appearance.
 
-[[I was at war.->Selection 1A]]
+"Well, mortal, who were you in life?"
 
-[[I was returning from a drink with a friend.->Selection 1B]]
+Memories flood your mind.
 
-[[I was escaping from a robbery.->Selection 1C]]
+[[I was a soldier.->Selection 1A]]
+
+[[I was a farmer.->Selection 1B]]
+
+[[I was a criminal.->Selection 1C]]
 
 
 :: Decision2 {"position":"1600,300","size":"100,100"}
-Choice
+The man asked another question,
 
-[[Selection 2A]]
+"How did you die?"
 
-[[Selection 2B]]
+[[An arrow from an enemy.->Selection 2A]]
 
-[[Selection 2C]]
+[[Poison in my drink from a friend.->Selection 2B]]
+
+[[Old age.->Selection 2C]]
 
 
 :: Decision3 {"position":"2050,300","size":"100,100"}
-[[Selection 3A]]
+The man looked down at his desk for a few moments. The sounds of paper shuffling could be heard.
 
-[[Selection 3B]]
+He returned his gaze onto you.
 
-[[Selection 3C]]
+"Where do you believe you should go in the afterlife?"
+
+[[The Honoured Halls->Selection 3A]]
+
+[[The Common Lands->Selection 3B]]
+
+[[The Pits of Anguish->Selection 3C]]
 
 
 :: Ending {"position":"2500,300","size":"100,100"}
@@ -47,8 +59,6 @@ this is the end
 
 
 :: Outcome1 {"position":"1450,300","size":"100,100"}
-This is Outcome1
-
 [[Continue->Decision2]]
 
 
@@ -61,20 +71,14 @@ This is Outcome1
 
 
 :: Selection 1A {"position":"1300,150","size":"100,100"}
-You smell nothing.
-
 [[Continue->Outcome1]]
 
 
 :: Selection 1B {"position":"1300,300","size":"100,100"}
-You hear nothing.
-
 [[Continue->Outcome1]]
 
 
 :: Selection 1C {"position":"1300,450","size":"100,100"}
-There is no ground under your feet.
-
 [[Continue->Outcome1]]
 
 
