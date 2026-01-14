@@ -29,7 +29,7 @@ Memories flood your mind.
 
 
 :: Decision2 {"position":"1600,300","size":"100,100"}
-The man asked another question,
+The man asks another question,
 
 "How did you die?"
 
@@ -41,9 +41,7 @@ The man asked another question,
 
 
 :: Decision3 {"position":"2050,300","size":"100,100"}
-The man looked down at his desk for a few moments. The sounds of paper shuffling could be heard.
-
-He returned his gaze onto you.
+The sounds of paper shuffling could be heard. After a while, he returned his gaze onto you.
 
 "Which realm do you believe you should go to in the afterlife?"
 
@@ -101,7 +99,7 @@ You remember a life of thievery and deceit. Always watching your back and trusti
 :: Selection 2A {"position":"1750,150","size":"100,100"}
 You think back to just moments before. You were in a tough battle, focusing on the enemies in front of you and did not notice an archer on the ridge in the distance. 
 
-Only in the final moments did you whip you head around in time to notice the arrows whistling through the air at your head.
+Only in the final moment did you whip you head around in time to see the arrows whistling through the air at your head.
 
 [[Continue->Outcome2]]
 
@@ -147,6 +145,6 @@ Moments ago, you had just died.
 
 You suddenly awake in water. Sitting up, you feel the surface just below your waist. Darkness stretches endlessly into the horizon. The only thing visible is a tall stone desk, behind which sits a man in a dark suit.
 
-You make eye contact with the man, and he gestures towards the space in front of his bench. This small space is mysteriously illuminated by an unseen light source. Though the cold harsh light did not provide any form of comfort.
+You make eye contact with the man, and he gestures towards a platform in front of his bench. This small space is mysteriously illuminated by an unseen light source. Though the cold harsh light did not provide any form of comfort.
 
-[[Walk up to bench.->Decision1]]
+[[Walk up to the platform.->Decision1]]
