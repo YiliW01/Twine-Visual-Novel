@@ -1,5 +1,5 @@
 :: StoryTitle
-1231_Example
+1231_TwineStory
 
 
 :: StoryData
@@ -137,7 +137,7 @@ You are calm, and slowly drift into sleep.
 
 
 :: Selection 3C {"position":"2200,450","size":"100,100"}
-"Ah, the Pits of Anguish." The man said. "Where those who were
+"Ah, the Pits of Anguish." The man said. "Where those who lived wickedly or those who deserve punishment go.
 
 [[Continue->Outcome3]]
 
