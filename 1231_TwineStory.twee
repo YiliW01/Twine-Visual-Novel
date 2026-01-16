@@ -29,7 +29,11 @@ Memories flood your mind.
 
 
 :: Decision2 {"position":"1600,300","size":"100,100"}
+<<<<<<< HEAD
 Instead of answering, the man responds with another question.
+=======
+The man asks another question.
+>>>>>>> 7b2f64ea1ae2b4395cff103c96518536aceaec9a
 
 "How did you die?"
 
