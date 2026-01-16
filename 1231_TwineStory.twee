@@ -25,15 +25,15 @@ Memories flood your mind.
 
 [[I was a farmer.->Selection 1B]]
 
-[[I was a criminal.->Selection 1C]]
+[[I was a thief.->Selection 1C]]
 
 
 :: Decision2 {"position":"1600,300","size":"100,100"}
-The man asks another question,
+Instead of answering, the man responds with another question.
 
 "How did you die?"
 
-[[An arrow from an enemy.->Selection 2A]]
+[[Struck down by an arrow.->Selection 2A]]
 
 [[Poison in a drink from a friend.->Selection 2B]]
 
@@ -41,41 +41,45 @@ The man asks another question,
 
 
 :: Decision3 {"position":"2050,300","size":"100,100"}
-The sounds of paper shuffling could be heard. After a while, he returned his gaze onto you.
+The sounds of paper shuffling could be heard. After a while, he returns his gaze onto you and answers your question.
 
-"Which realm do you believe you should go to in the afterlife?"
+"This is a judgement of where a soul should go after death. We look at their lives and decide between three realms; the Honoured Halls, the Common Lands and the Pits of Anguish. However, It seems we lack some of the details on your life. So I'll ask you directly. Which realm do you believe you should go to in the afterlife?"
 
-[[The Honoured Halls->Selection 3A]]
+[[The Honoured Halls.->Selection 3A]]
 
-[[The Common Lands->Selection 3B]]
+[[The Common Lands.->Selection 3B]]
 
-[[The Pits of Anguish->Selection 3C]]
+[[The Pits of Anguish.->Selection 3C]]
 
 
 :: Ending {"position":"2500,300","size":"100,100"}
-The man looks back down at his papers. A surprised expression rolls across his face.
+Just as you went to ask more questions. The man looks back down at his papers. A surprised expression rolls across his face.
 
-"Uh, apologies, it seems you were instead slotted for reincarnation. You will be sent back to the living very soon."
+"Uh, apologies, it seems here you are instead  for reincarnation. You will be sent back to the living very soon."
 
-Light begins to surround you. Very quickly the light becomes blinding, blocking out your surroundings. You feel your body lift in to the air, then falling...
+As he finished his sentence, light begins to surround you. Very quickly the light becomes blinding, blocking out your surroundings. 
+
+You feel your body lift in to the air, then falling...
 
 
 :: Outcome1 {"position":"1450,300","size":"100,100"}
-The man thinks about your answer. He stays silent.
+The man nods his head as you finish your story. He thinks for a moment.
 
-[[Continue->Decision2]]
+[[Ask where you are.->Decision2]]
 
 
 :: Outcome2 {"position":"1900,300","size":"100,100"}
 The man nods his head as you finish telling your story. He looks down at something on his desk.
 
-[[Continue->Decision3]]
+[[Ask what all this is for.->Decision3]]
 
 
 :: Outcome3 {"position":"2350,300","size":"100,100"}
-The man thought for a moment. "Very well, you may enter realm you chose."
+"You've lived a hard life. But the sum of your deeds have not weighed your soul in favor of good or bad. I believe you should go to the Common Lands."
 
-[[Continue->Ending]]
+The man grabs a sheet of paper and reaches for a stamp.
+
+[["Wait!"->Ending]]
 
 
 :: Selection 1A {"position":"1300,150","size":"100,100"}
@@ -91,7 +95,7 @@ You remember a a life spent toiling in the fields. Working hard to feed your fam
 
 
 :: Selection 1C {"position":"1300,450","size":"100,100"}
-You remember a life of thievery and deceit. Always watching your back and trusting very few people.
+You remember a life of struggle and hardship. And finally having to resort to theft and crime to feed yourself.
 
 [[Continue->Outcome1]]
 
@@ -101,7 +105,7 @@ You think back to just moments before. You were in a tough battle, focusing on t
 
 Only in the final moment did you whip you head around in time to see the arrows whistling through the air at your head.
 
-[[Continue->Outcome2]]
+[[Tell the man.->Outcome2]]
 
 
 :: Selection 2B {"position":"1750,300","size":"100,100"}
@@ -111,31 +115,37 @@ Your friend looks at you and says: "I'm sorry it had to come to this."
 
 The dizziness strengthens, until everything goes dark.
 
-[[Continue->Outcome2]]
+[[Tell the man.->Outcome2]]
 
 
 :: Selection 2C {"position":"1750,450","size":"100,100"}
-You think back to just moments before. You were resting peacefully in your bed. Your spouse next to you. You reflect back to the last few years of your life, most of it spent happily with your family.
+You think back to just moments before. You were resting peacefully in your bed. You reflect back to the last few years of your life, most of it spent happily with your family.
 
-You are calm, and slowly drift into sleep.
+You are calm, and slowly drift into sleep for the last time.
 
-[[Continue->Outcome2]]
+[[Tell the man.->Outcome2]]
 
 
 :: Selection 3A {"position":"2200,150","size":"100,100"}
-"Ah, the Honoured Halls." The man said. "Where those who deserve a happy and honoured afterlife go."
+"Ah, the Honoured Halls. Where those who deserve a happy and honoured afterlife go."  The man said.
+
+"Interesting you believe you have done enough good to deserve eternal happiness. Though I suppose most mortals live in hopes of reaching that place."
 
 [[Continue->Outcome3]]
 
 
 :: Selection 3B {"position":"2200,300","size":"100,100"}
-"Ah, the Common Lands." The man said. "A place for those who did nothing remarkable with their lives."
+"Ah, the Common Lands. A place for those who did nothing remarkable with their lives, but did not do much wrong either." The man said.
+
+"So you believe you've lived a life of equal good and evil? This is true more often than not. Perhaps you're right.
 
 [[Continue->Outcome3]]
 
 
 :: Selection 3C {"position":"2200,450","size":"100,100"}
-"Ah, the Pits of Anguish." The man said. "Where those who lived wickedly or those who deserve punishment go.
+"Ah, the Pits of Anguish. Where those who lived wickedly or those who deserve punishment go," the man said.
+
+"It's interesting you think you deserve punishment. Or perhaps you believe saying this will curry enough favor to change the outcome of your resting place?"
 
 [[Continue->Outcome3]]
 
