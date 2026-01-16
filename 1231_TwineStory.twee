@@ -29,11 +29,7 @@ Memories flood your mind.
 
 
 :: Decision2 {"position":"1600,300","size":"100,100"}
-<<<<<<< HEAD
 Instead of answering, the man responds with another question.
-=======
-The man asks another question.
->>>>>>> 7b2f64ea1ae2b4395cff103c96518536aceaec9a
 
 "How did you die?"
 
@@ -87,42 +83,74 @@ The man grabs a sheet of paper and reaches for a stamp.
 
 
 :: Selection 1A {"position":"1300,150","size":"100,100"}
+(set: $jobchoice to "soldier")
 You remember a life in the army. Fighting battles for kings and lords.
 
 [[Continue->Outcome1]]
 
 
 :: Selection 1B {"position":"1300,300","size":"100,100"}
+(set: $jobchoice to "farmer")
 You remember a a life spent toiling in the fields. Working hard to feed your family.
 
 [[Continue->Outcome1]]
 
 
 :: Selection 1C {"position":"1300,450","size":"100,100"}
+(set: $jobchoice to "thief")
 You remember a life of struggle and hardship. And finally having to resort to theft and crime to feed yourself.
 
 [[Continue->Outcome1]]
 
 
 :: Selection 2A {"position":"1750,150","size":"100,100"}
-You think back to just moments before. You were in a tough battle, focusing on the enemies in front of you and did not notice an archer on the ridge in the distance. 
+(set: $deathchoice to "arrow")
+(if: $jobchoice is "soldier")[You think back to just moments before. You were in a tough battle, focusing on the enemies in front of you and did not notice an archer on the ridge in the distance. 
 
 Only in the final moment did you whip you head around in time to see the arrows whistling through the air at your head.
 
 [[Tell the man.->Outcome2]]
+]
+(if: $jobchoice is "farmer")[War fell upon the land. Raiders came and razed the lands you've worked on your entire life. As you ran from the chaos, an arrow flew through the air and caught you in the back.
+
+Life drained from you slowly as you looked upon your burning home.
+
+[[Tell the man.->Outcome2]]
+]
+(if: $jobchoice is "thief")[You were on a job, stealing from a local lord. Just as you're about to scale the wall on your way out, you hear someone behind you shout out. 
+
+"Here! There's a thief!"
+
+You turn and see an archer raise their bow and let loose an arrow.
+
+Then, darkness.
+
+[[Tell the man.->Outcome2]]
+]
 
 
 :: Selection 2B {"position":"1750,300","size":"100,100"}
-You think back to just moments before. You were in a tavern with a friend. Someone you thought you trusted more than anyone else. You took a drink from your cup, and begin to feel dizzy. 
+(set: $deathchoice to "poison")
+(if: $jobchoice is "soldier")[
+
+[[Tell the man.->Outcome2]]
+]
+(if: $jobchoice is "farmer")[
+
+[[Tell the man.->Outcome2]]
+]
+(if: $jobchoice is "thief")[You think back to just moments before. You were in a tavern with a friend. Someone you thought you trusted more than anyone else. You took a drink from your cup, and begin to feel dizzy. 
 
 Your friend looks at you and says: "I'm sorry it had to come to this."
 
 The dizziness strengthens, until everything goes dark.
 
 [[Tell the man.->Outcome2]]
+]
 
 
 :: Selection 2C {"position":"1750,450","size":"100,100"}
+(set: $deathchoice to "age")
 You think back to just moments before. You were resting peacefully in your bed. You reflect back to the last few years of your life, most of it spent happily with your family.
 
 You are calm, and slowly drift into sleep for the last time.
@@ -157,7 +185,7 @@ You are calm, and slowly drift into sleep for the last time.
 :: Start {"position":"1000,300","size":"100,100"}
 Moments ago, you had just died. 
 
-You suddenly awake in water. Sitting up, you feel the surface just below your waist. Darkness stretches endlessly into the horizon. The only thing visible is a tall stone desk, behind which sits a man in a dark suit.
+You suddenly awake in water. Sitting up, you feel the surface just below your waist. Darkness stretches endlessly into the horizon. The only thing visible is a tall stone desk, behind which sits a man in dark clothing.
 
 You make eye contact with the man, and he gestures towards a platform in front of his bench. This small space is mysteriously illuminated by an unseen light source. Though the cold harsh light did not provide any form of comfort.
 
