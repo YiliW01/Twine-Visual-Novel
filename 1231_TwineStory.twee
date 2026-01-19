@@ -19,13 +19,13 @@ The man looks down at you for a moment, judging your appearance.
 
 "Well, mortal, who were you in life?"
 
-Memories flood your mind.
+Memories flood your mind, you remember your life.
 
-[[I was a soldier.->Selection 1A]]
+[[I was a soldier for my lord.->Selection 1A]]
 
-[[I was a farmer.->Selection 1B]]
+[[I was a farmer, peacefully tending to my fields.->Selection 1B]]
 
-[[I was a thief.->Selection 1C]]
+[[I was a thief, forced to rob and steal to survive.->Selection 1C]]
 
 
 :: Decision2 {"position":"1600,300","size":"100,100"}
@@ -33,9 +33,9 @@ Instead of answering, the man responds with another question.
 
 "How did you die?"
 
-[[Struck down by an arrow.->Selection 2A]]
+[[(War) Struck down by an arrow.->Selection 2A]]
 
-[[Poison in a drink from a friend.->Selection 2B]]
+[[(Betrayal) Poison in a drink from a friend.->Selection 2B]]
 
 [[Old age.->Selection 2C]]
 
