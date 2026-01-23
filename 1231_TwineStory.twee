@@ -89,16 +89,20 @@ The man grabs a sheet of paper and reaches for a stamp.
 The man grabs a sheet of paper and reaches for a stamp.
 [["Wait!"->Ending]]]
 
+(if:$soul>6)[good]
+(if:$soul<4)[bad]
+(if:$soul<=6 and $soul=>4)[neutral]
+
 
 :: Selection 1A {"position":"1300,150","size":"100,100"}
-(set: $jobchoice to "soldier")
+(set: $jobchoice to "soldier")(set: $soul = $soul + 1)
 You remember a life in the army. Training for years, and eventually fighting battles in the name of your lord.
 
 [[Continue->Outcome1]]
 
 
 :: Selection 1B {"position":"1300,300","size":"100,100"}
-(set: $jobchoice to "farmer")
+(set: $jobchoice to "farmer")(set:$soul = $soul - 1)
 You remember a a life spent toiling in the fields. Working hard to sow seeds and harvest crops.
 
 [[Continue->Outcome1]]
@@ -224,6 +228,7 @@ Eventually, as does for all, time catches up to you. You fall asleep for the las
 
 
 :: Start {"position":"1000,300","size":"100,100"}
+(set:$soul = 5)
 Moments ago, you had just died. 
 
 You suddenly awake in water. Sitting up, you feel the surface just below your waist. Darkness stretches endlessly into the horizon. The only thing visible is a tall stone desk, behind which sits a man in dark clothing.
