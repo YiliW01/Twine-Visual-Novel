@@ -41,7 +41,7 @@ Instead of answering, the man responds with another question.
 
 
 :: Decision3 {"position":"2050,300","size":"100,100"}
-The sounds of paper shuffling could be heard. After a while, he returns his gaze onto you and answers your question.
+The sounds of paper shuffling could be heard. After a while of searching his notes, he returns his gaze onto you and answers your question.
 
 "This is a judgement of where a soul should go after death. We look at their lives and decide between three realms; the Honoured Halls, the Common Lands and the Pits of Anguish. However, It seems we lack some of the details on your life. So I'll ask you directly. Which realm do you believe you should go to in the afterlife?"
 
@@ -63,13 +63,17 @@ You feel your body lift in to the air, then falling...
 
 
 :: Outcome1 {"position":"1450,300","size":"100,100"}
-The man nods his head as you finish your story. He thinks for a moment.
+(if: $jobchoice is "soldier")["Interesting. So you sought to make a living by waging war and bringing an end to others? Have you ever though about how many you've killed?](if: $jobchoice is "farmer")["Most of your life spent slaving away it seems. Working hard at an honest living. Have you never sought to dream bigger?](if: $jobchoice is "thief")["Your early life was spent in hardship, and so you turned to lawlessness for a living. Did you really only steal for survival? Or did that need turn to greed at some point?]
+
+You stay silent.
+
+"Just curious."
 
 [[Ask where you are.->Decision2]]
 
 
 :: Outcome2 {"position":"1900,300","size":"100,100"}
-The man nods his head as you finish telling your story. He looks down at something on his desk.
+"Interesting, I don't have that here." The man says as he looks down at something on his desk.
 
 [[Ask what all this is for.->Decision3]]
 
@@ -89,20 +93,20 @@ The man grabs a sheet of paper and reaches for a stamp.
 The man grabs a sheet of paper and reaches for a stamp.
 [["Wait!"->Ending]]]
 
-(if:$soul>6)[good]
-(if:$soul<4)[bad]
-(if:$soul<=6 and $soul=>4)[neutral]
+(if:$brownie>6)[good]
+(if:$brownie<4)[bad]
+(if:$brownie<=6 and $brownie>=4)[neutral]
 
 
 :: Selection 1A {"position":"1300,150","size":"100,100"}
-(set: $jobchoice to "soldier")(set: $soul = $soul + 1)
-You remember a life in the army. Training for years, and eventually fighting battles in the name of your lord.
+(set: $jobchoice to "soldier")(set: $brownie = $brownie - 1)
+You remember a life in the army. Training for years, and eventually fighting battles in the name of your lord. Years spent in wars started by your superiors, that you had no personal stakes for.
 
 [[Continue->Outcome1]]
 
 
 :: Selection 1B {"position":"1300,300","size":"100,100"}
-(set: $jobchoice to "farmer")(set:$soul = $soul - 1)
+(set: $jobchoice to "farmer")(set: $brownie = $brownie + 1)
 You remember a a life spent toiling in the fields. Working hard to sow seeds and harvest crops.
 
 [[Continue->Outcome1]]
@@ -117,19 +121,19 @@ You remember a life of struggle and hardship and finally having to resort to the
 
 :: Selection 2A {"position":"1750,150","size":"100,100"}
 (set: $deathchoice to "arrow")
-(if: $jobchoice is "soldier")[You think back to just moments before. 
+(if: $jobchoice is "soldier")[(set: $brownie = $brownie - 1)You think back to just moments before. 
 
 You and your fellow soldiers were ordered to invade an enemy land. The armies clashed inside of a small town. While you were focused on the enemies in front of you, a young man with his father's bow quietly crawled onto the roof of a house next to you.
 
 Only in the final moment did you whip you head around in time to see the arrow whistling through the air at your head.
 
 [[Tell the man.->Outcome2]]]
-(if: $jobchoice is "farmer")[War fell upon the land. Raiders came and razed the lands you've worked on your entire life. As you ran from the chaos, an arrow flew through the air and caught you in the back.
+(if: $jobchoice is "farmer")(set: $brownie = $brownie + 1)[War fell upon the land. Raiders came and razed the lands you've worked on your entire life. As you ran from the chaos, an arrow flew through the air and caught you in the back.
 
 Life drained from you slowly as you looked upon your burning home.
 
 [[Tell the man.->Outcome2]]]
-(if: $jobchoice is "thief")[You were on a job, stealing from a local lord. Just as you're about to scale the wall on your way out, you hear someone behind you shout out. 
+(if: $jobchoice is "thief")[(set: $brownie = $brownie - 1)You were on a job, stealing from a local lord. Just as you're about to scale the wall on your way out, you hear someone behind you shout out. 
 
 "Here! There's a thief!"
 
@@ -153,7 +157,7 @@ You begin to feel dizzy. You look around and most of your fellow soldiers, inclu
 You try to stand, but fall on your face. The dizziness strengthens, until everything goes dark.
 
 [[Tell the man.->Outcome2]]]
-(if: $jobchoice is "farmer")[You think back to just moments before.
+(if: $jobchoice is "farmer")[(set: $brownie = $brownie - 1)You think back to just moments before.
 
 You had grown your farm to an impressive size. Most of the town now reveres you, and you had gained much wealth and respect.
 
@@ -177,7 +181,7 @@ The dizziness strengthens, until everything goes dark.
 
 :: Selection 2C {"position":"1750,450","size":"100,100"}
 (set: $deathchoice to "age")
-(if: $jobchoice is "soldier")[You think back to just moments before.
+(if: $jobchoice is "soldier")[(set: $brownie = $brownie + 1)You think back to just moments before.
 
 A life of combat and war did not bring you a glorious death, or even a rather tasteless one. You were eventually discharged from your service due to your growing age.
 
@@ -228,10 +232,12 @@ Eventually, as does for all, time catches up to you. You fall asleep for the las
 
 
 :: Start {"position":"1000,300","size":"100,100"}
-(set:$soul = 5)
+(set:$brownie = 5)
 Moments ago, you had just died. 
 
 You suddenly awake in water. Sitting up, you feel the surface just below your waist. Darkness stretches endlessly into the horizon. The only thing visible is a tall stone desk, behind which sits a man in dark clothing.
+
+The man filled you with dread the moment you saw him. He was an agent of the underworld. You could tell immediately.
 
 You make eye contact with the man, and he gestures towards a platform in front of his bench. This small space is mysteriously illuminated by an unseen light source. Though the cold harsh light did not provide any form of comfort.
 
