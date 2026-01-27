@@ -12,44 +12,85 @@
 }
 
 
-:: Decision1 {"position":"1150,300","size":"100,100"}
-You approach the stand and step up onto a stone platform in the water. Only the sounds of water falling onto stone fills the silence.
+:: Age {"position":"1750,450","size":"100,100"}
+(set: $peace = $peace + 1)(set: $deathchoice to "age")(if: $jobchoice is "soldier")[You think back to just moments before.
 
-The man looks down at you for a moment, judging your appearance.
+A life of combat and war did not bring you a glorious death, or even a rather tasteless one. You were eventually discharged from your service due to your growing age.
 
-"Well, mortal, who were you in life?"
+You fall into disarray. Not knowing anything else, you drown youself in drink. Your life spent killing did not grant you any glory or honor. You found yourself old, alone and passed out in the streets where you fell asleep for the last time.
 
-Memories flood your mind, you remember your life.
+[[Tell the man.->Outcome2]]](if: $jobchoice is "farmer")[You think back to just moments before. 
 
-[[I was a soldier for my lord.->Selection 1A]]
+You were resting on your bed and reflecting back on your life. After a long and hard life of farming crops, you finally had a few years of rest, but age catches up to you, and you are bed ridden with sickness. Common for someone your age.
 
-[[I was a farmer, peacefully tending to my fields.->Selection 1B]]
+You are calm, and slowly drift into sleep for the last time.
 
-[[I was a thief, forced to rob and steal to survive.->Selection 1C]]
+[[Tell the man.->Outcome2]]](if: $jobchoice is "thief")[You think back to just moments before.
+
+After long time of stealing and thievery, you gave up your craft. With the riches you had amassed, you retired into anonymity. You even gave away some of your wealth to others around your place of retirement.
+
+Eventually, as does for all, time catches up to you. You fall asleep for the last time.
+
+[[Tell the man.->Outcome2]]]
 
 
-:: Decision2 {"position":"1600,300","size":"100,100"}
+:: Betrayal {"position":"1750,300","size":"100,100"}
+(set: $deathchoice to "poison")(if: $jobchoice is "soldier")[You think back to just moments before.
+
+You had worked your way up to a high ranking position in your lord's service. You had brokered a peace with an opposing nation, and it now was a feast celebrating the fact. There was music, good food and strong drink.
+
+Very strong drink.
+
+You begin to feel dizzy. You look around and most of your fellow soldiers, including your lord all looked too tipsy for it to be normal. You look back at some of the enemy soldiers. Many were smiling, others laughing at you.
+
+You try to stand, but fall on your face. The dizziness strengthens, until everything goes dark.
+
+[[Tell the man.->Outcome2]]](if: $jobchoice is "farmer")[You think back to just moments before.
+
+You had grown your farm to an impressive size. Most of the town now reveres you, and you had gained much wealth and respect.
+
+During the celebration to mark the end of harvesting, a fellow farm owner from a less successful farm congratulates you and hands you a drink. After you take a drink, you begin to feel dizzy.
+
+"Its just business friend." The farmer says.
+
+The dizziness strengthens, until everything goes dark.
+
+[[Tell the man.->Outcome2]]](if: $jobchoice is "thief")[You think back to just moments before.
+
+You were in a tavern with a friend. One of the few people you thought you could trust in your line of work. You took a drink from your cup, and begin to feel dizzy. 
+
+Your friend looks at you and says: "I'm sorry it had to come to this. But the bounty on you was too high to pass up."
+
+The dizziness strengthens, until everything goes dark.
+
+[[Tell the man.->Outcome2]]]
+
+
+:: DeathChoice {"position":"1600,300","size":"100,100"}
 Instead of answering, the man responds with another question.
 
 "How did you die?"
+(if:$jobchoice is $soldier)[
+[[I joined a campaign against a neighbouring land.->War]]
 
-[[(War) Struck down by an arrow.->Selection 2A]]
+[[I was betrayed by an allied army.->Betrayal]]
 
-[[(Betrayal) Poison in a drink from a friend.->Selection 2B]]
+[[I was discharged and left to the streets.->Age]]]
+(if:$jobchoice is $farmer)[]
+(if:$jobchoice is $thief)[]
 
-[[(Peaceful) Old age.->Selection 2C]]
 
-
-:: Decision3 {"position":"2050,300","size":"100,100"}
+:: Destination {"position":"2050,300","size":"100,100"}
 The sounds of paper shuffling could be heard. After a while of searching his notes, he returns his gaze onto you and answers your question.
 
 "This is a judgement of where a soul should go after death. We look at their lives and decide between three realms; the Honoured Halls, the Common Lands and the Pits of Anguish. However, It seems we lack some of the details on your life. So I'll ask you directly. Which realm do you believe you should go to in the afterlife?"
 
-[[The Honoured Halls.->Selection 3A]]
 
-[[The Common Lands.->Selection 3B]]
+[[I deserve to go to the Honoured Halls.->Selection 3A]]
 
-[[The Pits of Anguish.->Selection 3C]]
+[[I lived like most others. The Common Lands.->Selection 3B]]
+
+[[I deserve punishment. The Pits of Anguish.->Selection 3C]]
 
 
 :: Ending {"position":"2500,300","size":"100,100"}
@@ -62,6 +103,28 @@ As he finished his sentence, light begins to surround you. Very quickly the ligh
 You feel your body lift in to the air, then falling...
 
 
+:: Farmer {"position":"1300,300","size":"100,100"}
+(set: $jobchoice to "farmer")[You remember taking over the family farm. Spending most of your life toiling in the fields. Working hard to sow seeds and harvest crops.
+
+[[Continue->Outcome1]]]
+
+
+:: JobChoice {"position":"1150,300","size":"100,100"}
+You approach the stand and step up onto a stone platform in the water. Only the sounds of water falling onto stone fills the silence.
+
+The man looks down at you for a moment, judging your appearance.
+
+"Well, mortal, who were you in life?"
+
+Memories flood your mind, you remember your life.
+
+[[I lived for glory and honour. (Soldier)->Soldier]]
+
+[[I lived simply and peacefully. (Farmer)->Farmer]]
+
+[[I stole and robbed to survive. (Thief)->Thief]]
+
+
 :: Outcome1 {"position":"1450,300","size":"100,100"}
 (if: $jobchoice is "soldier")["Interesting. So you sought to make a living by waging war and bringing an end to others? Have you ever though about how many you've killed?](if: $jobchoice is "farmer")["Most of your life spent slaving away it seems. Working hard at an honest living. Have you never sought to dream bigger?](if: $jobchoice is "thief")["Your early life was spent in hardship, and so you turned to lawlessness for a living. Did you really only steal for survival? Or did that need turn to greed at some point?]
 
@@ -69,13 +132,13 @@ You stay silent.
 
 "Just curious."
 
-[[Ask where you are.->Decision2]]
+[[Ask where you are.->DeathChoice]]
 
 
 :: Outcome2 {"position":"1900,300","size":"100,100"}
 "Interesting, I don't have that here." The man says as he looks down at something on his desk.
 
-[[Ask what all this is for.->Decision3]]
+[[Ask what all this is for.->Destination]]
 
 
 :: Outcome3 {"position":"2350,300","size":"100,100"}
@@ -83,57 +146,81 @@ You stay silent.
 
 The man grabs a sheet of paper and reaches for a stamp.
 
-[["Thank him."->Ending]]]
-(if: $afterlife is "common")["Very well. The Common Lands is quite the common destination for mortals. Afterall, the sum of one's life often ends in a balance of good and bad.
+[["Thank him."->Ending]]](if: $afterlife is "common")["Very well. The Common Lands is quite the common destination for mortals. Afterall, the sum of one's life often ends in a balance of good and bad.
 
 The man grabs a sheet of paper and reaches for a stamp.
-[["Thank him."->Ending]]]
-(if: $afterlife is "anguish")["Very well. I'm sure you have your reasons for this self punishment. But do realize this choice will last for the rest of eternity.
+[["Thank him."->Ending]]](if: $afterlife is "anguish")["Very well. I'm sure you have your reasons for this self punishment. But do realize this choice will last for the rest of eternity.
 
 The man grabs a sheet of paper and reaches for a stamp.
 [["Wait!"->Ending]]]
 
-(if:$brownie>6)[good]
-(if:$brownie<4)[bad]
-(if:$brownie<=6 and $brownie>=4)[neutral]
+(if:$brownie>6)[]
+(if:$brownie<4)[]
+(if:$brownie<=6 and $brownie>=4)[]
 
 
-:: Selection 1A {"position":"1300,150","size":"100,100"}
-(set: $jobchoice to "soldier")(set: $brownie = $brownie - 1)
-You remember a life in the army. Training for years, and eventually fighting battles in the name of your lord. Years spent in wars started by your superiors, that you had no personal stakes for.
+:: Selection 3A {"position":"2200,150","size":"100,100"}
+(set: $afterlife to "honor")["Ah, the Honoured Halls. Where those who deserve a happy and honoured afterlife go."  The man said.
 
-[[Continue->Outcome1]]
+"Interesting you believe you have done enough good to deserve eternal happiness. Though I suppose most mortals live in hopes of reaching that place."
 
-
-:: Selection 1B {"position":"1300,300","size":"100,100"}
-(set: $jobchoice to "farmer")(set: $brownie = $brownie + 1)
-You remember a a life spent toiling in the fields. Working hard to sow seeds and harvest crops.
-
-[[Continue->Outcome1]]
+(if: $jobchoice is "farmer")
+[[Continue->Outcome3]]
 
 
-:: Selection 1C {"position":"1300,450","size":"100,100"}
-(set: $jobchoice to "thief")
-You remember a life of struggle and hardship and finally having to resort to theft and crime to feed yourself.
+:: Selection 3B {"position":"2200,300","size":"100,100"}
+(set: $afterlife to "common")
+["Ah, the Common Lands. A place for those who did nothing remarkable with their lives, but did not do much wrong either." The man said.
 
-[[Continue->Outcome1]]
+"So you believe you've lived a life of equal good and evil? This is true more often than not. Perhaps you're right.
+
+(if:)[[[Continue->Outcome3]]]
 
 
-:: Selection 2A {"position":"1750,150","size":"100,100"}
-(set: $deathchoice to "arrow")
-(if: $jobchoice is "soldier")[(set: $brownie = $brownie - 1)You think back to just moments before. 
+:: Selection 3C {"position":"2200,450","size":"100,100"}
+(set: $afterlife to "anguish")["Ah, the Pits of Anguish. Where those who lived wickedly or those who deserve punishment go," the man said.
+
+"It's interesting you think you deserve punishment. Or perhaps you believe saying this will curry enough favor to change the outcome of your destination?"
+
+[[Continue->Outcome3]]]
+
+
+:: Soldier {"position":"1300,150","size":"100,100"}
+(set: $jobchoice to "soldier")[You remember enlisting into your lord's service when you were young. Training for years, and eventually fighting battles in the name of your lord. Years spent in wars started by your superiors, that you had no personal stakes for.
+
+[[Continue->Outcome1]]]
+
+
+:: Start {"position":"1000,300","size":"100,100"}
+[Moments ago, you had just died.
+
+You suddenly awake in water. Sitting up, you feel the surface just below your waist. Darkness stretches endlessly into the horizon. The only thing visible is a tall stone desk, behind which sits a man in dark clothing.
+
+The man filled you with dread the moment you saw him. He was an agent of the underworld. You could tell immediately.
+
+You make eye contact with the man, and he gestures towards a platform in front of his bench. This small space is mysteriously illuminated by an unseen light source. Though the cold harsh light did not provide any form of comfort.
+
+[[Walk up to the platform.->JobChoice]]]
+
+
+:: Thief {"position":"1300,450","size":"100,100"}
+(set: $jobchoice to "thief")[You remember a life of struggle and hardship and finally having to resort to theft and crime to feed yourself.
+
+[[Continue->Outcome1]]]
+
+
+:: War {"position":"1750,150","size":"100,100"}
+(set:$deathchoice to "war")(if: $jobchoice is "soldier")[You think back to just moments before.
 
 You and your fellow soldiers were ordered to invade an enemy land. The armies clashed inside of a small town. While you were focused on the enemies in front of you, a young man with his father's bow quietly crawled onto the roof of a house next to you.
 
 Only in the final moment did you whip you head around in time to see the arrow whistling through the air at your head.
 
-[[Tell the man.->Outcome2]]]
-(if: $jobchoice is "farmer")(set: $brownie = $brownie + 1)[War fell upon the land. Raiders came and razed the lands you've worked on your entire life. As you ran from the chaos, an arrow flew through the air and caught you in the back.
+[[Tell the man.->Outcome2]]](if: $jobchoice is "farmer")[War fell upon the land. Raiders came and razed the lands you've worked on your entire life. As you ran from the chaos, an arrow flew through the air and caught you in the back.
 
 Life drained from you slowly as you looked upon your burning home.
 
-[[Tell the man.->Outcome2]]]
-(if: $jobchoice is "thief")[(set: $brownie = $brownie - 1)You were on a job, stealing from a local lord. Just as you're about to scale the wall on your way out, you hear someone behind you shout out. 
+[[Tell the man.->Outcome2]]](if: $jobchoice is "thief")[You were on a job, stealing from a local lord. Just as you're about to scale the wall on your way out, you hear someone behind you shout out. 
 
 "Here! There's a thief!"
 
@@ -142,103 +229,3 @@ You turn and see an archer raise their bow and let loose an arrow.
 Then, darkness.
 
 [[Tell the man.->Outcome2]]]
-
-
-:: Selection 2B {"position":"1750,300","size":"100,100"}
-(set: $deathchoice to "poison")
-(if: $jobchoice is "soldier")[You think back to just moments before.
-
-You had worked your way up to a high ranking position in your lord's service. You had brokered a peace with an opposing nation, and it now was a feast celebrating the fact. There was music, good food and strong drink.
-
-Very strong drink.
-
-You begin to feel dizzy. You look around and most of your fellow soldiers, including your lord all looked too tipsy for it to be normal. You look back at some of the enemy soldiers. Many were smiling, others laughing at you.
-
-You try to stand, but fall on your face. The dizziness strengthens, until everything goes dark.
-
-[[Tell the man.->Outcome2]]]
-(if: $jobchoice is "farmer")[(set: $brownie = $brownie - 1)You think back to just moments before.
-
-You had grown your farm to an impressive size. Most of the town now reveres you, and you had gained much wealth and respect.
-
-During the celebration to mark the end of harvesting, a fellow farm owner from a less successful farm congratulates you and hands you a drink. After you take a drink, you begin to feel dizzy.
-
-"Its just business friend." The farmer says.
-
-The dizziness strengthens, until everything goes dark.
-
-[[Tell the man.->Outcome2]]]
-(if: $jobchoice is "thief")[You think back to just moments before.
-
-You were in a tavern with a friend. One of the few people you thought you could trust in your line of work. You took a drink from your cup, and begin to feel dizzy. 
-
-Your friend looks at you and says: "I'm sorry it had to come to this. But the bounty on you was too high to pass up."
-
-The dizziness strengthens, until everything goes dark.
-
-[[Tell the man.->Outcome2]]]
-
-
-:: Selection 2C {"position":"1750,450","size":"100,100"}
-(set: $deathchoice to "age")
-(if: $jobchoice is "soldier")[(set: $brownie = $brownie + 1)You think back to just moments before.
-
-A life of combat and war did not bring you a glorious death, or even a rather tasteless one. You were eventually discharged from your service due to your growing age.
-
-You fall into disarray. Not knowing anything else, you drown youself in drink. Your life spent killing did not grant you any glory or honor. You found yourself old, alone and passed out in the streets where you fell asleep for the last time.
-
-[[Tell the man.->Outcome2]]]
-(if: $jobchoice is "farmer")[You think back to just moments before. 
-
-You were resting on your bed and reflecting back on your life. After a long and hard life of farming crops, you finally had a few years of rest, but age catches up to you, and you are bed ridden with sickness. Common for someone your age.
-
-You are calm, and slowly drift into sleep for the last time.
-
-[[Tell the man.->Outcome2]]]
-(if: $jobchoice is "thief")[You think back to just moments before.
-
-After long time of stealing and thievery, you gave up your craft. With the riches you had amassed, you retired into anonymity. You even gave away some of your wealth to others around your place of retirement.
-
-Eventually, as does for all, time catches up to you. You fall asleep for the last time.
-
-[[Tell the man.->Outcome2]]]
-
-
-:: Selection 3A {"position":"2200,150","size":"100,100"}
-(set: $afterlife to "honor")
-"Ah, the Honoured Halls. Where those who deserve a happy and honoured afterlife go."  The man said.
-
-"Interesting you believe you have done enough good to deserve eternal happiness. Though I suppose most mortals live in hopes of reaching that place."
-
-[[Continue->Outcome3]]
-
-
-:: Selection 3B {"position":"2200,300","size":"100,100"}
-(set: $afterlife to "common")
-"Ah, the Common Lands. A place for those who did nothing remarkable with their lives, but did not do much wrong either." The man said.
-
-"So you believe you've lived a life of equal good and evil? This is true more often than not. Perhaps you're right.
-
-[[Continue->Outcome3]]
-
-
-:: Selection 3C {"position":"2200,450","size":"100,100"}
-(set: $afterlife to "anguish")
-"Ah, the Pits of Anguish. Where those who lived wickedly or those who deserve punishment go," the man said.
-
-"It's interesting you think you deserve punishment. Or perhaps you believe saying this will curry enough favor to change the outcome of your destination?"
-
-[[Continue->Outcome3]]
-
-
-:: Start {"position":"1000,300","size":"100,100"}
-(set:$brownie = 5)
-Moments ago, you had just died. 
-
-You suddenly awake in water. Sitting up, you feel the surface just below your waist. Darkness stretches endlessly into the horizon. The only thing visible is a tall stone desk, behind which sits a man in dark clothing.
-
-The man filled you with dread the moment you saw him. He was an agent of the underworld. You could tell immediately.
-
-You make eye contact with the man, and he gestures towards a platform in front of his bench. This small space is mysteriously illuminated by an unseen light source. Though the cold harsh light did not provide any form of comfort.
-
-[[Walk up to the platform.->Decision1]]
